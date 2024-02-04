@@ -1,0 +1,33 @@
+baseURL = 'https://mileskent.github.io/'
+languageCode = 'en-us'
+title = 'Miles Kent'
+theme = 'nightfall'
+
+[params]
+    footerHtml = '<p> </p>'
+    user = "mileskent"
+    hostname = "github.io"
+
+    [[params.social]]
+        key = 0
+        name = "github"
+        url = "https://github.com/mileskent"
+
+    [params.author]
+        name = "Miles Kent"
+        email = "mileskent13@gmail.com"
+
+[menu]
+    [[menu.header]]
+        name = "projects"
+        url = "/projects"
+    [[menu.header]]
+        name = "recipes"
+        url = "/recipes/recipes"
+    [[menu.header]]
+        name = "resources"
+        url = "/resources"
+    [[menu.header]]
+        name = "about"
+        url = "/about"
+
