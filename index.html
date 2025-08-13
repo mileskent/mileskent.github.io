@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles Kent | Home Directory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="sun-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <header class="bio-container">
+        <h1 class="name">Miles Kent</h1>
+        <div>
+            <div>Undergrad CS Student @ Georgia Tech 🐝</div>
+            <br>
+            <div>
+                <div>BSCS Threads:</div>
+                <div style="padding-left: 2em;">
+                    ->
+                    <a href="https://www.cc.gatech.edu/academics/threads/systems-architecture" target="_blank">
+                        Systems & Architecture
+                    </a>
+                </div>
+                <div style="padding-left: 2em;">
+                    ->
+                    <a href="https://www.cc.gatech.edu/academics/threads/modeling-simulation" target="_blank">
+                        Modeling & Simulation
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div>Systems Software Engineering</div>
+                <div style="padding-left: 2em;">
+                    @
+                    <a href="https://gdmissionsystems.com/space">
+                        General Dynamics</a>
+                    (Real-Time Compute)
+                </div>
+                <div style="padding-left: 2em;">
+                    @
+                    <a href="https://www.gtri.gatech.edu/about/research-facilities/systems-development-division">
+                        GTRI ATAS-SDD</a>
+                    (Radar Systems)
+                </div>
+            </div>
+            <br>
+            <div>
+                Born to Haskell λ & Rust 🦀 in a C++ world
+            </div>
+        </div>
+    </header>
+
+    <main class="nav-grid">
+    <a href="/notes" class="nav-card">
+        <strong>NOTES</strong>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8.5L15.5 3z"></path>
+            <path d="M15 3v6h6"></path>
+        </svg>
+    </a>
+    <a href="https://github.com/mileskent" class="nav-card" target="_blank">
+        <strong>GITHUB</strong>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+</main>
+</body>
+<script>
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    });
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const target = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', target);
+    }
+</script>
+<style>
+    :root {
+        --bg: #f2f4f8;
+        --card-bg: #ffffff;
+        --text: #2e3440;
+        --accent: #5e81ac;
+        --cursor: #bf616a;
+    }
+
+    [data-theme="dark"] {
+        --bg: #1a1b26;
+        --card-bg: #24283b;
+        --text: #a9b1d6;
+        --accent: #7aa2f7;
+        --cursor: #f7768e;
+    }
+
+    body {
+        font-family: 'Fira Code', monospace;
+        background-color: var(--bg);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        transition: background 0.3s ease, color 0.3s ease;
+        text-align: left;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--accent);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sun-icon, .moon-icon {
+        position: absolute;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+    [data-theme="dark"] .sun-icon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    [data-theme="dark"] .moon-icon {
+        opacity: 0; transform: scale(0) rotate(-90deg);
+        pointer-events: none;
+    }
+    [data-theme="light"] .sun-icon {
+        opacity: 0;
+        transform: scale(0) rotate(90deg);
+        pointer-events: none;
+    }
+    [data-theme="light"] .moon-icon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    .bio-container {
+        max-width: 450px;
+        margin-bottom: 2.5rem;
+    }
+    .name {
+        font-size: 1.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: var(--accent);
+        font-weight: 700;
+        animation: hueRot 5s linear infinite;
+    }
+    @keyframes hueRot {
+        from { filter: hue-rotate(0deg); }
+        to { filter: hue-rotate(360deg); }
+    }
+    .nav-grid {
+        width: 100%;
+        max-width: 400px;
+        display: grid;
+        gap: 1rem;
+    }
+    .nav-card {
+        background: var(--card-bg);
+        padding: 1.2rem;
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: 0.2s;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    [data-theme="dark"] .nav-card {
+        border: 1px solid rgba(122, 162, 247, 0.2);
+    }
+    .nav-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        color: var(--accent);
+    }
+    .nav-card svg {
+        width: 18px;
+        height: 18px;
+    }
+</style>
+</html>
