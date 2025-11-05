@@ -13,12 +13,16 @@
     <div class="grid-2">
         <!-- NAME -->
         <div class="section-1">
-            <img class="shadow-lg" src="https://placehold.co/150"/ style="margin-bottom: 25px;">
-            <h2 class="pulse-text">Miles Kent</h2>
-            <p>Bay Area, Atlanta</p>
-            <a href="https://github.com/mileskent"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/miles-kent/"><i class="fab fa-linkedin"></i></a>
-            <p>mkent39@gatech.edu</p>
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <img class="shadow-lg" src="res/pfp_placeholder.gif"/ style="margin-bottom: 25px; width: 150px; height: 150px;">
+                    <h2 class="pulse-text">Miles Kent</h2>
+                    <p>Bay Area, Atlanta</p>
+                    <a href="https://github.com/mileskent"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/miles-kent/"><i class="fab fa-linkedin"></i></a>
+                    <p>mkent39@gatech.edu</p>
+                </div>
+            </div>
         </div>
         <div class="section-2">
 
@@ -51,12 +55,23 @@
                 <h2 class="card-title mb-3">Projects</h2>
                 <div class="d-flex flex-row gap-2">
                     <a href="https://github.com/mileskent/Multiple_Neighborhood_Cellular_Automata" class="flex-fill">
-                        <img class="w-100 h-100 shadow-lg crop-square" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.joshgracie.com%2FMNCA.gif&f=1&nofb=1&ipt=50c7056a552e52eb311b01d1fb168915dbe92e91baa869ed2b4836cf513aa40b">
+                        <img class="w-100 h-100 shadow-lg crop-square" src="res/mnca.gif">
                     </a>
                     <a href="https://github.com/mileskent/surge_cfd" class="flex-fill">
-                        <img class="w-100 h-100 shadow-lg crop-square" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.gifer.com%2Forigin%2F64%2F640f1da6fcefd9b5ded85c67596d5e1f_w200.gif&f=1&nofb=1&ipt=97fa1e11fcf730f3076722fdfa3fa936e4e047f98de83ead80faf5cacd50689b">
+                        <img class="w-100 h-100 shadow-lg crop-square" src="res/cfd.gif">
                     </a>
-                    <a href="https://github.com/mileskent/mileskent.github.io" class="flex-fill">
+                    <a href="https://example.com" class="flex-fill">
+                        <img class="w-100 h-100 shadow-lg crop-square" src="https://placehold.co/150">
+                    </a>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <a href="https://example.com" class="flex-fill">
+                        <img class="w-100 h-100 shadow-lg crop-square" src="https://placehold.co/150">
+                    </a>
+                    <a href="https://example.com" class="flex-fill">
+                        <img class="w-100 h-100 shadow-lg crop-square" src="https://placehold.co/150">
+                    </a>
+                    <a href="https://example.com" class="flex-fill">
                         <img class="w-100 h-100 shadow-lg crop-square" src="https://placehold.co/150">
                     </a>
                 </div>
@@ -68,11 +83,25 @@
 .card {
     border: 0;
 }
+.section-1 .card {
+    max-width: 250px;   
+    margin: 0 auto;     
+    padding: 10px;      
+    border-radius: 10px;
+}
+img {
+    border-radius: 10px;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: 'Fira Sans', sans-serif;
-    background-color: #e9f0f7;
+    background-color: #e9f0f7; /* fallback color */
+    background-image: url('res/bg.jpg');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     color: #06132e;
 }
 .grid-2{
@@ -82,9 +111,13 @@ body{
 a{
     text-decoration: none;
 }
-.section-1{
-    padding-top: 40vh;
+.section-1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
     text-align: center;
+    padding: 0;              
 }
 .section-1 a {
     font-size: 1.5rem;
