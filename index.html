@@ -17,7 +17,7 @@
                 <div class="card-body text-center">
                     <img class="shadow-lg" src="res/pfp_placeholder.gif"/ style="margin-bottom: 25px; width: 150px; height: 150px;">
                     <h2 class="pulse-text">Miles Kent</h2>
-                    <p>Bay Area, Atlanta</p>
+                    <p>Bay Area | Atlanta</p>
                     <a href="https://github.com/mileskent"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/miles-kent/"><i class="fab fa-linkedin"></i></a>
                     <p>mkent39@gatech.edu</p>
@@ -46,6 +46,16 @@
                 <i class="devicon-rust-plain colored fs-2" title="Rust"></i>
                 <i class="devicon-haskell-plain colored fs-2" title="Haskell"></i>
             </div>
+            <div class="p-2"></div>
+            <p class="card-text" style="display: inline;">
+                I also have some cool notes for 
+                <a href="https://mileskent.github.io/low-level-vault/" class="fst-italic d-inline link-underline-hover">
+                    Low Level Computing</a>
+                 and 
+                <a href="https://mileskent.github.io/math-vault/" class="fst-italic d-inline link-underline-hover">
+                   Math</a>
+            </p>
+
             </div>
         </div>
 
@@ -146,9 +156,10 @@ a{
     font-size: 1.7rem;
     margin-bottom: 10px;
 }
-.section-2{
+.section-2 {
     padding-top: 10vh;
     width: 70%;
+    margin: 0 auto;
 }
 .section-2 h2{
     font-size: 1.7rem;
@@ -217,6 +228,26 @@ a{
     to {
         color: #0056b3;
     }
+}
+.link-underline-hover {
+  position: relative;
+  display: inline-block;
+}
+.link-underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.1s ease;
+}
+.link-underline-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 </style>
 </html>
