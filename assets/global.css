@@ -1,0 +1,170 @@
+:root {
+    --bg: #f2f4f8;
+    --card-bg: #ffffff;
+    --text: #2e3440;
+    --cursor: #bf616a;
+    --accent-color: #ffa500;
+    --accent-animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.accented {
+    color: var(--accent-color);
+    animation: var(--accent-animation);
+}
+.normallink {
+    color: var(--accent-color);
+    animation: var(--accent-animation);
+    text-decoration: none;
+    font-weight: 700;
+}
+.normallink:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+    filter: drop-shadow(0 0 8px var(--accent-color));
+}
+
+[data-theme="dark"] {
+    --bg: #1a1b26;
+    --card-bg: #24283b;
+    --text: #a9b1d6;
+    --cursor: #f7768e;
+}
+
+* {
+    font-family: 'Fira Code', monospace !important;
+}
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-align: left;
+}
+
+.theme-toggle:hover .sun-icon,
+.theme-toggle:hover .moon-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px var(--accent-color));
+}
+.theme-toggle:hover {
+    transition: transform 0.2s ease;
+}
+.theme-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sun-icon {
+    opacity: 0;
+    transform: scale(0) rotate(90deg);
+    pointer-events: none;
+}
+.moon-icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+.sun-icon, .moon-icon {
+    position: absolute;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+[data-theme="dark"] .sun-icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+[data-theme="dark"] .moon-icon {
+    opacity: 0; transform: scale(0) rotate(-90deg);
+    pointer-events: none;
+}
+[data-theme="light"] .sun-icon {
+    opacity: 0;
+    transform: scale(0) rotate(90deg);
+    pointer-events: none;
+}
+[data-theme="light"] .moon-icon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+.bio-container {
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+.name {
+    font-size: 1.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 700;
+}
+.nav-grid {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    gap: 1rem;
+    margin: 20px auto;
+    margin-top: 0;
+}
+.nav-card {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 1.2rem;
+    text-decoration: none;
+    border: 2px solid var(--accent-color);
+    animation: var(--accent-animation);
+    border-radius: 8px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.nav-card svg {
+    width: 18px;
+    height: 18px;
+}
+.cat-hover::before {
+    content: "\1F431"; /* Default Cat 🐱 */
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+}
+.nav-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    filter: drop-shadow(0 0 8px var(--accent-color));
+    transform: translateY(-2px);
+}
+.nav-card:hover::before {
+    content: "\1F63A"; /* Happy Cat 😺 */
+    transform: scale(1.2) rotate(-10deg);
+}
+.dest-icon {
+    width: 20px;
+    height: 20px;
+}
+
