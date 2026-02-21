@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miles Kent | Home Directory</title>
@@ -73,16 +79,12 @@
 </main>
 </body>
 <script>
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            window.location.reload();
-        }
-    });
     function toggleTheme() {
         const html = document.documentElement;
         const current = html.getAttribute('data-theme');
         const target = current === 'light' ? 'dark' : 'light';
         html.setAttribute('data-theme', target);
+        localStorage.setItem('theme', target);
     }
 </script>
 <style>
@@ -102,8 +104,10 @@
         --cursor: #f7768e;
     }
 
+    * {
+        font-family: 'Fira Code', monospace !important;
+    }
     body {
-        font-family: 'Fira Code', monospace;
         background-color: var(--bg);
         color: var(--text);
         display: flex;
@@ -132,6 +136,15 @@
         align-items: center;
         justify-content: center;
     }
+    .sun-icon {
+        opacity: 0;
+        transform: scale(0) rotate(90deg);
+        pointer-events: none;
+    }
+    .moon-icon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
     .sun-icon, .moon-icon {
         position: absolute;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
@@ -156,6 +169,7 @@
     .bio-container {
         max-width: 450px;
         margin-bottom: 2.5rem;
+        display: block;
     }
     .name {
         font-size: 1.8rem;
