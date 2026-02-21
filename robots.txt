@@ -1,8 +1,8 @@
-# Permit indexing
+# Permits indexing
 User-agent: *
 Allow: /
 
-# Disallow LLM scraping
+# *Discourages* LLM scraping
 User-agent: GPTBot
 Disallow: /
 User-agent: ChatGPT-User
