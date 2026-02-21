@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+    <script src="/assets/js/theme.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miles Kent | Home Directory</title>
+    <title>Miles Kent | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/global.css">
 </head>
 
 <body>
@@ -84,12 +79,5 @@
     </main>
 </body>
 <script>
-    function toggleTheme() {
-        const html = document.documentElement;
-        const current = html.getAttribute('data-theme');
-        const target = current === 'light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', target);
-        localStorage.setItem('theme', target);
-    }
 </script>
 </html>
