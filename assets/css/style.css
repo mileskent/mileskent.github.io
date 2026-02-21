@@ -42,7 +42,7 @@
 }
 
 * {
-    font-family: 'Fira Code', monospace !important;
+    font-family: 'Fira Code', 'Noto Color Emoji', monospace !important;
 }
 body {
     background-color: var(--bg);
