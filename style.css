@@ -53,7 +53,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 20px 20px 60px;
     transition: background 0.3s ease, color 0.3s ease;
     text-align: left;
 }
@@ -162,6 +162,30 @@ body {
 .nav-card:hover::before {
     content: "\1F63A"; /* Happy Cat 😺 */
     transform: scale(1.2) rotate(-10deg);
+}
+.webring {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #2e7d32;
+    opacity: 0.85;
+}
+.webring span {
+    animation: var(--accent-animation);
+}
+.webring a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.webring a:hover {
+    color: var(--accent-color);
 }
 .dest-icon {
     width: 20px;
